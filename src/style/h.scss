@@ -1,0 +1,10 @@
+@each $header, $size in (h1: 5rem, h2: 4em, h3: 3em, h4: 2rem, h5: 1rem) {
+  #{$header} {
+    font-size: $size;
+    line-height: 30px;
+  }
+}
+
+.yellow {
+  color: yellowgreen;
+}
