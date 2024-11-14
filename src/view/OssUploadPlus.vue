@@ -10,7 +10,7 @@ import uploadImage from '@/libs/uploadUtil/uploadOSS.js'
 import { ref } from 'vue';
 
 //修改头像
-const avatar = ref('https://oss.w2gd.top/blog/joker.png')
+const avatar = ref('https://w2gd.oss-cn-nanjing.aliyuncs.com/up/xinyeai.jpg')
 const uploadRef = ref()
 const uploadImg = () => {
   uploadRef.value.click()

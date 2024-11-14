@@ -11,7 +11,7 @@ import OSS from 'ali-oss'
 import { ref } from 'vue';
 import { NUpload } from 'naive-ui';
 import { config } from '@/libs/uploadUtil/config'
-const imgurl = ref('https://oss.w2gd.top/blog/joker.png')
+const imgurl = ref('https://w2gd.oss-cn-nanjing.aliyuncs.com/up/xinyeai.jpg')
 const handleChange = (options) => {
   let file = options.fileList[0].file
   // sdk提供的创建客户端实例方法
@@ -29,8 +29,7 @@ const handleChange = (options) => {
   client.multipartUpload(`upload/${filename}`, file).then(res => {
     console.log('上传成功：', res)
     // ... 你的操作，可以拼接图片url，用于显示等...
-    imgurl.value = `https://oss.w2gd.top/${res.name}!wmk`
-
+    imgurl.value = `${config.fileHost}/${res.name}`
   }).catch(err => {
     console.log('上传失败：', err)
   })

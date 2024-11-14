@@ -20,7 +20,7 @@ const uploadFile = function (params) {
     params.filePath.name.substring(params.filePath.name.lastIndexOf(".") + 1);
   const aliyunFileKey = params.dir + name;
 
-  const aliyunServerURL = config.uploadImageUrl;
+  const aliyunServerURL = config.fileHost;
   const accessid = config.OSSAccessKeyId;
   const policyBase64 = getPolicyBase64();
   const signature = getSignature(policyBase64);
